@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* In stable Tailwind v4, they changed @custom-variant to just @variant */
+@variant dark (&:where(.dark, .dark *));
+
+html {
+  font-size: 16px;
+}
+
+@theme {
+  --color-brand-bg: #0B0E14;
+  --color-brand-card: #141823;
+  --color-brand-border: #1E2330;
+  --color-brand-blue: #2788FF;
+  --color-brand-disclaimer: #0D1627;
+  --color-brand-disclaimer-border: #1E3A8A; 
+}
+
+@layer base {
+  body {
+    /* Light Mode Defaults */
+    @apply bg-slate-50 text-slate-900 transition-colors duration-200; 
+    color-scheme: light; /* <-- Added this */
+  }
+  
+  .dark body {
+    /* Dark Mode Defaults */
+    @apply bg-brand-bg text-slate-100;
+    color-scheme: dark; /* <-- THIS IS THE MAGIC LINE! */
+  }
+}
