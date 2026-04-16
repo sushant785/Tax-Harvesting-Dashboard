@@ -136,7 +136,7 @@ npm run dev
   <tr>
     <td width="50%" align="center">
       <img src="./docs//loaders.png" width="100%" alt="Skeleton Loaders"/><br/>
-      <b>Dark Mode Skeleton Loaders</b>
+      <b>Skeleton Loaders</b>
     </td>
     <td width="50%" align="center">
       <img src="./docs/search.png" width="100%" alt="Search Filter"/><br/>
