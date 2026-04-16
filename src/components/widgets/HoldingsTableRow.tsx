@@ -27,7 +27,7 @@ const HoldingsTableRow: React.FC<HoldingsTableRowProps> = ({ asset, isSelected, 
           type="checkbox" 
           checked={isSelected}
           onChange={() => dispatch(toggleCoinSelection(asset.coin))}
-          className="w-4 h-4 cursor-pointer accent-blue-600 dark:accent-brand-blue transition-all" 
+          className="w-4 h-4 cursor-pointer rounded border-slate-300 dark:border-slate-600 text-blue-600 focus:ring-blue-500 dark:focus:ring-brand-blue dark:ring-offset-slate-900 transition-transform duration-200 hover:scale-110 active:scale-95" 
         />
       </td>
       <td className="px-4 py-4">
@@ -145,13 +145,30 @@ const HoldingsTableRow: React.FC<HoldingsTableRowProps> = ({ asset, isSelected, 
       </td>
 
       
-      <td className="px-4 py-4 text-right font-medium text-slate-300 dark:text-slate-600 min-w-[150px]">
-        {isSelected ? (
-          <span className="font-semibold text-gray-900 dark:text-slate-100">
-            {smartFormat(asset.totalHolding)} {asset.coin}
+      <td className="px-4 py-4 text-right min-w-[150px]">
+        <div 
+          className={`transition-all duration-300 transform ${
+            isSelected 
+              ? 'opacity-100 translate-x-0' 
+              : 'opacity-0 translate-x-4 pointer-events-none'
+          }`}
+        >
+          {isSelected && (
+            <div className="flex flex-col items-end">
+              <span className="font-semibold text-gray-900 dark:text-slate-100">
+                {smartFormat(asset.totalHolding)} {asset.coin}
+              </span>
+              <span className="text-xs text-blue-600 dark:text-brand-blue font-medium">
+                ≈ {formatCurrency(asset.totalHolding * asset.currentPrice)}
+              </span>
+            </div>
+          )}
+        </div>
+        
+        {!isSelected && (
+          <span className="text-slate-300 dark:text-slate-600 absolute right-4 top-1/2 -translate-y-1/2 transition-opacity duration-300 delay-100">
+            -
           </span>
-        ) : (
-          "-"
         )}
       </td>
     </tr>
