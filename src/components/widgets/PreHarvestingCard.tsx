@@ -80,7 +80,7 @@ const PreHarvestingCard: React.FC<PreHarvestingCardProps> = ({ stcg, ltcg, reali
       </div>
 
       <div className="mt-5 pt-4 border-t border-gray-200 dark:border-brand-border flex items-center gap-3">
-        <span className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <span className="text-[22px] font-semibold text-gray-900 dark:text-white">
           Realised Capital Gains:
         </span>
         <span className="text-xl font-bold dark:text-white">

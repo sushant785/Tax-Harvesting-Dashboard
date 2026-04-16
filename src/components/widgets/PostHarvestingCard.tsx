@@ -85,7 +85,7 @@ const PostHarvestingCard: React.FC<PostHarvestingCardProps> = ({ stcg, ltcg, rea
 
       <div>
         <div className="mt-5 pt-4 border-t border-blue-500/50 flex items-center gap-3">
-          <span className="text-2xl font-semibold">
+          <span className="text-[22px] font-semibold">
             Effective Capital Gains:
           </span>
           <span className="text-2xl font-bold">
