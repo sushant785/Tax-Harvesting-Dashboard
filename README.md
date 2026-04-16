@@ -1,73 +1,176 @@
-# React + TypeScript + Vite
+# 🚀 KoinX – AI Tax Harvesting Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance financial dashboard designed to help cryptocurrency investors **minimize tax liability** through intelligent **Tax Loss Harvesting**.
 
-Currently, two official plugins are available:
+The platform identifies **loss-making assets (underwater positions)** and allows users to offset gains, resulting in **optimized tax outcomes** — all through a clean, responsive, and modern UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###  Adaptive Theme Engine
 
-## Expanding the ESLint configuration
+* Seamless **Dark Mode & Light Mode** with persistent user preference
+* Custom **KoinX color palette** (Midnight Navy, Slate tones, Brand Blue)
+* Optimized `color-scheme` for native UI elements (checkboxes, scrollbars)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+###  Advanced Portfolio Management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **High Precision Support**: Handles scientific notation (e.g., `3.46e-17`)
+* **Dynamic Search**: Instantly filter assets by name or symbol
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+###  Tax Harvesting Logic
+
+* Clear breakdown of:
+
+  * **Short-Term Capital Gains (STCG)**
+  * **Long-Term Capital Gains (LTCG)**
+* **Interactive Selection System**:
+
+  * Select assets to simulate selling
+  * Real-time recalculation of gains and losses
+* **Optimized Tax Insight**:
+
+  * Instantly see reduced taxable gains
+  * Highlight potential **tax savings**
+
+---
+
+### ⚡ Professional UI/UX
+
+* **Custom Tooltips** for precise financial data
+* **Skeleton Loaders** for smooth loading experience
+* Clean, minimal table design for a **premium dashboard feel**
+* Fully **responsive layout** (desktop + mobile)
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* **React (Vite)** + **TypeScript**
+* **Redux Toolkit** – Global state management
+* **Tailwind CSS** – Utility-first styling
+* **Lucide React** – Icon system
+* **Context API** – Theme management
+
+---
+
+### Utilities & Helpers
+
+* **Intl.NumberFormat** – Currency formatting
+* **Custom SmartFormat Utility** – Handles:
+
+  * Extreme decimal precision
+  * Scientific notation values
+
+---
+
+## 🧠 Core Concepts Implemented
+
+* Tax Loss Harvesting Simulation
+* Real-time Financial Calculations
+* Optimized State Synchronization
+* Clean Component Architecture
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sushant785/Tax-Harvesting-Dashboard.git
+cd koinx-dashboard
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+
+
+---
+
+## 📸 Screenshots
+
+### 🌓 Theme Experience
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img src="./docs/darkmode.jpeg" width="100%" alt="Dark Mode"/><br/>
+      <b>Dark Mode Dashboard</b>
+    </td>
+    <td width="50%" align="center">
+      <img src="./docs/lightmode.jpeg" width="100%" alt="Light Mode"/><br/>
+      <b>Light Mode Dashboard</b>
+    </td>
+  </tr>
+</table>
+
+### 📊 Data & Interaction
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img src="./docs/sort.png" width="100%" alt="Table UI"/><br/>
+      <b>Clean Table UI with Sort </b>
+    </td>
+    <td width="50%" align="center">
+      <img src="./docs/tooltip.png" width="100%" alt="Tooltips"/><br/>
+      <b>Intelligent Data Tooltips</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="./docs//loaders.png" width="100%" alt="Skeleton Loaders"/><br/>
+      <b>Dark Mode Skeleton Loaders</b>
+    </td>
+    <td width="50%" align="center">
+      <img src="./docs/search.png" width="100%" alt="Search Filter"/><br/>
+      <b>Real-time Asset Search</b>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 📌 Assumptions
+
+* Data is mocked using static APIs
+* No real-time crypto API integration
+* Focus is on frontend logic and UI/UX
+
+---
+
+## 🏆 Highlights
+
+* Clean and scalable architecture
+* Real-world financial logic implementation
+* Production-level UI/UX practices
+* Performance-focused rendering
+
+---
+
+## 📬 Submission
+
+* GitHub Repository: https://github.com/sushant785/Tax-Harvesting-Dashboard.git
+
+---
+
+## 📄 License
+
+This project is built for assignment purposes and demonstration of frontend engineering skills.
+
